@@ -22,7 +22,7 @@ for root, dirs, files in os.walk(file_dir):
     for f in files:
         if f.endswith(".mseed"):
             path = os.path.join(root, f)
-            os.system(f"../utils/mseedidx -sqlite {sql_file} {path}")
+            os.system(f"./mseedidx -sqlite {sql_file} {path}")
             count += 1 
             if count %100 ==0:
                 print("已完成", count, path)
